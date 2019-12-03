@@ -86,6 +86,13 @@ const flexWrapMap = styledMap`
   fw: wrap;
   default: null;
 `
+const textAlignMap = styledMap`
+  c: center;
+  r: right;
+  j: justify;
+  l: left;
+`
+
 const textDecorationMap = styledMap`
   lt: line-through;
   ul: underline;
@@ -138,7 +145,7 @@ export const H1 = styled.h1`
   color: ${styleVariables.mainFontColor};
   font-family: ${styleVariables.mainFontFamily};
   font-weight: bold;
-  text-align: ${props => props.ta};
+  text-align: ${textAlignMap};
 `
 export const H2 = styled.h2`
   width: ${props => props.w};
@@ -153,7 +160,7 @@ export const H2 = styled.h2`
   color: ${styleVariables.mainFontColor};
   font-family: ${styleVariables.mainFontFamily};
   font-weight: bold;
-  text-align: ${props => props.ta};
+  text-align: ${textAlignMap};
 `
 export const H3 = styled.h3`
   width: ${props => props.w};
@@ -168,7 +175,7 @@ export const H3 = styled.h3`
   color: ${styleVariables.mainFontColor};
   font-family: ${styleVariables.mainFontFamily};
   font-weight: bold;
-  text-align: ${props => props.ta};
+  text-align: ${textAlignMap};
 `
 
 export const P = styled.p`
@@ -183,7 +190,23 @@ export const P = styled.p`
   font-size: ${styleVariables.fontSizeP};
   color: ${styleVariables.mainFontColor};
   font-family: ${styleVariables.mainFontFamily};
-  text-align: ${props => props.ta};
+  text-align: ${textAlignMap};
+  text-decoration: ${textDecorationMap};
+`
+
+export const A = styled.a`
+  width: ${props => props.w};
+  height: ${props => props.h};
+  margin: ${props => props.m};
+  padding: ${props => props.p};
+  min-width: ${props => props.minw};
+  max-width: ${props => props.maxw};
+  min-height: ${props => props.minh};
+  max-height: ${props => props.maxh};
+  font-size: ${styleVariables.fontSizeP};
+  color: ${styleVariables.mainFontColor};
+  font-family: ${styleVariables.mainFontFamily};
+  text-align: ${textAlignMap};
   text-decoration: ${textDecorationMap};
 `
 
