@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { TextInput, Button } from '../emotionalThings/EmoTools'
+import { TextInput, Button, Label, FlexForm, FlexContainer } from '../emotionalThings/EmoTools'
 
 class SearchForm extends Component {
   constructor() {
@@ -18,11 +18,13 @@ class SearchForm extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-      <label htmlFor='search'>Search User</label>
+      <FlexForm fdc aic onSubmit={this.handleSubmit}>
+      <Label m='1%' htmlFor='search'>Search User</Label>
+      <FlexContainer>
       <TextInput name='search' onChange={this.handleChange} value={this.state.searchString} />
       <Button type='submit'>Search</Button>
-      </form>
+      </FlexContainer>
+      </FlexForm>
     )
   }
 }

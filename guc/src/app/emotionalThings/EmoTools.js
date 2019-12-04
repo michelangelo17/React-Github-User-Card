@@ -119,6 +119,26 @@ export const FlexContainer = styled.div`
   box-shadow: ${boxShadowMap};
   position: relative;
 `
+export const FlexForm = styled.form`
+  display: flex;
+  flex-direction: ${flexDirectionMap};
+  justify-content: ${justifyContentMap};
+  align-items: ${alignItemsMap};
+  align-content: ${alignContentMap};
+  flex-wrap: ${flexWrapMap};
+  width: ${props => props.w};
+  height: ${props => props.h};
+  margin: ${props => props.m};
+  padding: ${props => props.p};
+  min-width: ${props => props.minw};
+  max-width: ${props => props.maxw};
+  min-height: ${props => props.minh};
+  max-height: ${props => props.maxh};
+  background-color: ${colorMap};
+  border-radius: ${props => props.br};
+  box-shadow: ${boxShadowMap};
+  position: relative;
+`
 
 export const BasicImg = styled.img`
   width: ${props => props.w};
@@ -193,6 +213,21 @@ export const P = styled.p`
   text-align: ${textAlignMap};
   text-decoration: ${textDecorationMap};
 `
+export const Small = styled.small`
+  width: ${props => props.w};
+  height: ${props => props.h};
+  margin: ${props => props.m};
+  padding: ${props => props.p};
+  min-width: ${props => props.minw};
+  max-width: ${props => props.maxw};
+  min-height: ${props => props.minh};
+  max-height: ${props => props.maxh};
+  font-size: ${styleVariables.fontSizeSmall};
+  color: ${styleVariables.mainFontColor};
+  font-family: ${styleVariables.mainFontFamily};
+  text-align: ${textAlignMap};
+  text-decoration: ${textDecorationMap};
+`
 
 export const A = styled.a`
   width: ${props => props.w};
@@ -238,4 +273,19 @@ export const TextInput = styled.input`
   min-height: ${props => props.minh};
   max-height: ${props => props.maxh};
   font-size: ${styleVariables.fontSizeSmall};
+`
+export const Label = styled.label`
+  width: ${props => props.w};
+  height: ${props => props.h};
+  margin: ${props => props.m};
+  padding: ${props => props.p};
+  min-width: ${props => props.minw};
+  max-width: ${props => props.maxw};
+  min-height: ${props => props.minh};
+  max-height: ${props => props.maxh};
+  font-size: ${styleVariables.fontSizeP};
+  color: ${styleVariables.mainFontColor};
+  font-family: ${styleVariables.mainFontFamily};
+  text-align: ${textAlignMap};
+  text-decoration: ${textDecorationMap};
 `
